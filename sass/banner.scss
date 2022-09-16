@@ -1,0 +1,100 @@
+.banner{
+    background: url('../images/img-banner.png') no-repeat;
+    background-size: cover;
+    padding-top: 305px;
+    padding-bottom: 325px;
+    position: relative;
+}
+.title-banner h2{
+    font-family: Quicksand;
+    font-weight: bold;
+    color: $textWhite;
+    font-size: 60px;
+    margin: 0;
+}
+.des-banner{
+    width: 600px;
+    margin: 0 auto;
+}
+.des-banner p{
+    font-family: Quicksand_book;
+    font-weight: normal;
+    color: $textWhite-light;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.container-banner{
+    text-align: center;
+}
+.banner-down{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner-down{
+    animation: header-down 1s infinite;
+    cursor: pointer;
+}
+@keyframes header-down{
+    0%{
+        opacity: 0.5;
+        bottom: 4%;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@include responsive_1200{
+
+}
+@include responsive_1024{
+    .banner{
+        padding-top: 225px;
+        padding-bottom: 250px;
+    }
+}
+@include responsive_992{
+    .title-banner h2 {
+        font-size: 50px;
+    }
+    .banner{
+        padding-top: 215px;
+        padding-bottom: 244px;
+    }
+}
+@include responsive_768{
+    .title-banner h2{
+        font-size: 40px;
+    }
+    .des-banner {
+        width: 80%;
+    }
+}
+@include responsive_600{
+    .des-banner p{
+        font-size: 15px;
+    }
+    .banner{
+        padding-top: 160px;
+        padding-bottom: 94px;
+    }
+    .title-banner h2 {
+        font-size: 30px;
+    }
+}
+@include responsive_480{
+    .title-banner h2 {
+        font-size: 25px;
+    }
+    .des-banner p {
+        font-size: 13px;
+    }
+    .banner {
+        padding-top: 112px;
+    }
+    .banner-down img{
+        width: 30px;
+    }
+}

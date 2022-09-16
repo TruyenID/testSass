@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../../../static/Quicksand-Bold.woff2') format('woff2'),
+        url('../../../static/Quicksand-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../../../static/Quicksand-Light.woff2') format('woff2'),
+        url('../../../static/Quicksand-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../../../static/Quicksand-Medium.woff2') format('woff2'),
+        url('../../../static/Quicksand-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../../../static/Quicksand-Regular.woff2') format('woff2'),
+        url('../../../static/Quicksand-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../../../static/Quicksand-SemiBold.woff2') format('woff2'),
+        url('../../../static/Quicksand-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quicksand_book';
+    src: url('../../../static/Quicksand_Book.otf') format('woff2'),;;
+    font-style: normal;
+    font-display: swap;
+}
+body{
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}

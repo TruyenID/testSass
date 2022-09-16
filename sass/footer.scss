@@ -1,0 +1,86 @@
+.container-available{
+    display: flex;
+    align-items: center;
+}
+.available{
+    background-color: #535253;
+    padding: 20px 0;
+}
+.content-available h2{
+    color: $textWhite;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 20px;
+}
+.footer-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-content{
+        width: 320px;
+    }
+    &-content .title-footer h2{
+        font-family: 'Quicksand';
+        font-weight: bold;
+        font-size: 20px;
+        color: $textWhite;
+        margin-top: 0;
+    }
+    &-content .des-footer p{
+        font-family: 'Quicksand';
+        font-weight: bold;
+        color: $textWhite;
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    &-menu ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: -5px;;
+    }
+    &-menu ul li a{
+        color: $textWhite;
+        font-size: 14px;
+        font-family: 'Quicksand';
+        font-weight: bold;
+    }
+    &-menu ul li{
+        padding: 0  5px;
+    }
+    &-menu ul span{
+        color: $textWhite;
+    }
+}
+.des-menu-footer p{
+    text-align: right;
+    color: $textWhite;
+    font-size: 18px;
+    font-family: 'Quicksand';
+    font-weight: bold;    
+}
+.menu-footer{
+    background-color: #424242;
+    padding-top: 105px;
+    padding-bottom: 115px;
+}
+@include responsive_480{
+    .footer-main{
+        display: block;
+        &-content{
+            text-align: center;
+            margin: 0 auto;
+        }
+        &-menu{
+            text-align: center;
+            margin: 0 auto;
+        }
+        &-menu ul{
+            padding-left: 0;
+        }
+    }
+    .des-menu-footer p{
+        text-align: center;
+    }
+}

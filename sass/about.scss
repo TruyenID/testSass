@@ -1,0 +1,63 @@
+.about{
+    background-color: $color-brown;
+    text-align: center;
+    padding-top: 75px;
+    margin-top: 130px;
+    padding-bottom: 70px;
+}
+.des-about{
+    border: solid 2px #918363;
+    width: 430px;
+    margin: 0 auto;
+    padding: 90px 110px;
+    position: relative;
+}
+.des-about p{
+    margin:0;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 16px;
+    color: $color-black;
+}
+.title-about h2{
+    color: #918363;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-brown;
+    padding: 0 15px;
+}
+@include responsive_768{
+    .des-about{
+        padding: 70px 90px;
+    }
+}
+@include responsive_600{
+    .des-about{
+        width: 65%;
+        padding: 50px 70px;
+    }
+    .des-about p {
+        font-size: 14px;
+    }
+}
+@include responsive_480{
+    .about{
+        margin-top: 90px;
+    }
+    .des-about {
+        width: 65%;
+        padding: 40px 50px;
+    }
+    .des-about p {
+        font-size: 10px;
+    }
+    .title-about h2{
+        font-size: 15px;
+        top: -24px;
+    }
+}

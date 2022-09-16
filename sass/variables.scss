@@ -1,0 +1,42 @@
+$textWhite : #ffffff;
+$textWhite-light : #d3d3d4;
+$color-brown: #aa9b77;
+$color-black : #333333;
+$backgournd-second : #f5f6f7;
+
+$res_1200 : "only screen and (max-width: 1200px)";
+$res_1024 : "only screen and (max-width : 1024px)";
+$res_992 : "only screen and (max-width : 992px )";
+$res_768 : "only screen and (max-width : 768px)";
+$res_600 : "only screen and (max-width : 600px)";
+$res_480 : "only screen and (max-width : 480px)";
+@mixin responsive_1200() {
+    @media #{$res_1200} {
+        @content;
+    }
+}
+@mixin responsive_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}
+@mixin responsive_992() {
+    @media #{$res_992} {
+        @content;
+    }
+}
+@mixin responsive_768() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+@mixin responsive_600() {
+    @media #{$res_600} {
+        @content;
+    }
+}
+@mixin responsive_480() {
+    @media #{$res_480} {
+        @content;
+    }
+}

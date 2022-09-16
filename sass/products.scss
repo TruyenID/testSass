@@ -1,0 +1,211 @@
+.container-name-products{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 70px;
+}
+.line{
+    height: 2px;
+    width: 996px;
+    background: $textWhite-light;
+}
+.name-products-detail h2{
+    font-size: 20px;
+    font-family: "Quicksand";
+    color: $color-black;
+}
+.item-product{
+    background-color: $backgournd-second;
+    width: 308px;
+    border: solid 6px $color-brown;
+    border-radius: 5px;
+}
+.color{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cirle-color{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.cirle-color:nth-child(1){
+    background: blue;
+}
+.cirle-color:nth-child(2){
+    background-color: #ffe637;
+}
+.cirle-color:nth-child(3){
+    background-color: #535253;
+}
+.size-color{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    padding-bottom: 50px;
+    padding-top: 25px;
+}
+.size{
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 16px;
+    color: $color-black;
+    position: relative;
+}
+.img-product{
+    text-align: center;
+    height: 210px;
+}
+.category-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    padding-bottom: 25px;
+    padding-top: 50px;
+}
+.category-price .category{
+    font-family: 'Quicksand';
+    font-size: 18px;
+    color: $color-brown;
+    font-weight: bold;
+}
+.category-price .price{
+    font-size: 22px;
+    font-family: 'Quicksand';
+    color: $color-black;
+    font-weight: bold;
+}
+.items-products{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pagination-first div, .pagination-second div {
+    font-family: 'Quicksand';
+    font-size: 16px;
+    color: $color-brown;
+    font-weight: bold;
+}
+.pagination div:nth-child(2){
+    font-size: 20px;
+    cursor: pointer;
+}
+.pagination-first {
+    text-align: right;
+    padding-bottom: 25px;
+}
+.pagination-second {
+    text-align: left;
+    padding-bottom: 25px;
+}
+.size-color span{
+    display: block;
+    transform: rotate(90deg);
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    right: -20px;
+    cursor: pointer;
+}
+.name-products:nth-child(2){
+    flex-direction: row-reverse;
+}
+@include responsive_1200{
+    .item-product{
+        width: 30%;
+    }
+}
+@include responsive_992{
+    .line{
+        width: 796px;
+    }
+    .img-product img{
+        height: 100%;
+    }
+    .img-product{
+        height: 180px;
+    }
+    .size-color{
+        padding-bottom: 40px;
+    }
+    .category-price{
+        padding-top: 40px;
+    }
+}
+@include responsive_768{
+    .img-product {
+        height: 150px;
+    }
+    .size-color {
+        padding-bottom: 30px;
+        padding-top: 15px;
+    }
+    .container-name-products{
+        padding-bottom: 30px;
+        padding-top: 50px;
+    }
+    .category-price{
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+    .line{
+        width: 80%;
+    }
+}
+@include responsive_600{
+    .category-price ,.size-color{
+        padding: 0 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .category-price .price{
+        font-size: 16px;
+    }
+    .category-price .category{
+        font-size: 16px;
+    }
+    .img-product {
+        height: 120px;
+    }
+    .container-name-products {
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    .cirle-color {
+        width: 15px;
+        height: 15px;
+    }
+    .name-products-detail h2 {
+        font-size: 16px;
+    }
+}
+@include responsive_480{
+    .items-products {
+        display: block;
+    }
+    .item-product{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .img-product {
+        height: auto;
+    }
+    .size-color{
+        padding: 0 20px;
+        padding-bottom: 50px;
+        padding-top: 25px;
+    }
+    .category-price{
+        padding: 0 20px;
+        padding-bottom: 25px;
+        padding-top: 50px;
+    }
+}
