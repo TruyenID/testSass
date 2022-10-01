@@ -4,58 +4,60 @@
     padding: 50px 0;
     top: 0;
     z-index: 9999;
+    @include responsive_600{
+        padding: 30px 0;
+    }
+    @include responsive_480{
+        padding: 15px 0;
+    }
     &-main{
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-}
-.menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 -26px;
-    &-header ul{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 0;
-    }
-    &-header ul li a{
-        color: $textWhite;
-        font-family: Quicksand;
-        font-weight: bold;
-        font-size: 18px;
-    }
-    &-header ul li{
-        padding: 0 26px;
-    }
-}
-.cart-header{
-    padding: 0 26px;
-}
-@include responsive_600{
-    .menu-header ul li a{
-        font-size: 15px;
-    }
-    .header{
-        padding: 30px 0;
-    }
-}
-@include responsive_480{
-    .menu-header ul li a {
-        font-size: 13px;
-    }
-    .header {
-        padding: 15px 0;
-    }
-    .logo-header a img{
-        width: 40px;
-    }
-    .menu-header ul li {
-        padding: 0 16px;
-    }
-    .menu{
-        margin: 0 -16px;
+        &-logo {
+            img{
+                @include responsive_480{
+                    width: 40px;
+                }
+            }
+        }
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 -26px;
+            @include responsive_480{
+                margin: 0 -16px;
+            }
+            &-header {
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-left: 0;
+                    li {
+                        padding: 0 26px;
+                        @include responsive_480{
+                            padding: 0 16px;
+                        }
+                        a{
+                            color: $textWhite;
+                            font-family: $font1;
+                            font-weight: bold;
+                            font-size: 18px;
+                            @include responsive_600{
+                                font-size: 15px;
+                            }
+                            @include responsive_480{
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            .cart-header{
+                padding: 0 26px;
+            }
+        }
     }
 }

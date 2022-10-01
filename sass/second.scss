@@ -1,111 +1,110 @@
 .second{
     background: $backgournd-second;
     padding: 60px 0;
-}
-.item-second input[type="checkbox"]{
-    display: none;
-}
-.item-second::before{
-    content: '';
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    border: 2px solid #cccccc;
-    border-radius: 2px;
-    position: relative;
-    top: 4px;
-}   
-.item-second label{
-    color: $color-black;
-}
-.item-second {
-    position: relative;
-    cursor: pointer;
-    margin-right: 40px;
-}
-.check{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 1px;
-    fill: $color-brown;
-    display: none;
-    position: absolute;
-    left: 0px;
-    top: -5px;
-}
-.item-second input[type="checkbox"]:checked + .check{
-    display: block;
-    border: 2px solid $color-brown;
-    border-radius: 2px;
-    width: 20px;
-    height: 20px;
-}
-.item-second label{
-    font-family: Quicksand;
-    font-weight: bold;
-    font-size: 18px;
-    padding-left: 15px;
-}
+    .item-second {
+        position: relative;
+        cursor: pointer;
+        margin-right: 40px;
+        @include responsive_600{
+            margin-right: 10px;
+        }
+        input[type="checkbox"]{
+            display: none;
+        }
+        input[type="checkbox"]:checked + .check{
+            display: block;
+            border: 2px solid $color-brown;
+            border-radius: 2px;
+            width: 20px;
+            height: 20px;
+            @include responsive_600{
+                top: 6px;
+            }
+            @include responsive_480{
+                width: 10px;
+                height: 10px;
+                top: 3px
+            }
+        }
+        label{
+            font-family: $font1;
+            font-weight: bold;
+            font-size: 18px;
+            padding-left: 15px;
+            @include responsive_600{
+                font-size: 14px;
+                padding-left: 5px;
+            }
+            @include responsive_480{
+                font-size: 12px;
+                padding-left: 0px;
+            }
+        }
+        .check{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 1px;
+            fill: $color-brown;
+            display: none;
+            position: absolute;
+            left: 0px;
+            top: -5px;
+        }
+    }
+    .item-second::before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border: 2px solid #cccccc;
+        border-radius: 2px;
+        position: relative;
+        top: 4px;
+        @include responsive_600{
+            top: 6px;
+        }
+        @include responsive_480{
+            width: 10px;
+            height: 10px;
+            top: 3px;
+        }
+    } 
+}  
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.narbar-right a{
-    color: $textWhite;
-    background: $color-brown;
-    display: block;
-    width: 198px;
-    height: 48px;
-    text-align: center;
-    font-size: 14px;
-    font-family: Quicksand;
-    line-height: 3.5;
-    border-radius: 5px;
-    border: solid 2px $color-brown;
-}
-.narbar-right a:hover{
-    background:$backgournd-second;
-    color:$color-brown;
-    border: solid 2px $color-brown;
-    transition: 0.5s;
-}
-@include responsive_600{
-    .item-second{
-        margin-right: 20px;
-    }
-    .item-second label {
-        font-size: 15px;
-        padding-left: 5px;
-    }
-    .item-second::before, .item-second input[type=checkbox]:checked + .check {
-        width: 15px;
-        height: 15px;
-    }
-    .item-second input[type=checkbox]:checked + .check{
-        top: -1px;
-    }
-    .narbar-right a{
-        width: 160px;
-        height: 40px;
-        line-height: 2.8;
-    }
-    .item-second {
-        margin-right: 10px;
-    }
-    .narbar-right a {
-        width: 120px;
-        height: 30px;
-        font-size: 10px;
-    }
-    .item-second label {
-        font-size: 12px;
-        padding-left: 0px;
-    }
-    .item-second::before, .item-second input[type=checkbox]:checked + .check {
-        width: 10px;
-        height: 10px;
-        top: 3px
+    .narbar-right {
+        a{  
+            color: $textWhite;
+            background: $color-brown;
+            display: block;
+            width: 198px;
+            height: 48px;
+            text-align: center;
+            font-size: 14px;
+            font-family: Quicksand;
+            line-height: 3.5;
+            border-radius: 5px;
+            border: solid 2px $color-brown;
+            @include responsive_600{
+                width: 140px;
+                height: 40px;
+                line-height: 3.4;
+                font-size: 12px;
+            }
+            @include responsive_480{
+                width: 120px;
+                height: 30px;
+                font-size: 10px;
+            }
+        }
+        a:hover{
+            background:$backgournd-second;
+            color:$color-brown;
+            border: solid 2px $color-brown;
+            transition: 0.5s;
+        }
     }
 }

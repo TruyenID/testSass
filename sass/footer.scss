@@ -1,86 +1,88 @@
-.container-available{
-    display: flex;
-    align-items: center;
-}
 .available{
     background-color: #535253;
     padding: 20px 0;
-}
-.content-available h2{
-    color: $textWhite;
-    font-family: 'Quicksand';
-    font-weight: bold;
-    font-size: 16px;
-    padding-left: 20px;
-}
-.footer-main{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    &-content{
-        width: 320px;
-    }
-    &-content .title-footer h2{
-        font-family: 'Quicksand';
-        font-weight: bold;
-        font-size: 20px;
-        color: $textWhite;
-        margin-top: 0;
-    }
-    &-content .des-footer p{
-        font-family: 'Quicksand';
-        font-weight: bold;
-        color: $textWhite;
-        font-size: 10px;
-        margin-bottom: 0;
-    }
-    &-menu ul {
+    .container-available{
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        margin-right: -5px;;
+        .content-available h2{
+            color: $textWhite;
+            font-family: $font1;
+            font-weight: bold;
+            font-size: 16px;
+            padding-left: 20px;
+        }
     }
-    &-menu ul li a{
-        color: $textWhite;
-        font-size: 14px;
-        font-family: 'Quicksand';
-        font-weight: bold;
-    }
-    &-menu ul li{
-        padding: 0  5px;
-    }
-    &-menu ul span{
-        color: $textWhite;
-    }
-}
-.des-menu-footer p{
-    text-align: right;
-    color: $textWhite;
-    font-size: 18px;
-    font-family: 'Quicksand';
-    font-weight: bold;    
 }
 .menu-footer{
     background-color: #424242;
     padding-top: 105px;
     padding-bottom: 115px;
-}
-@include responsive_480{
     .footer-main{
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include responsive_480{
+            display: block;
+        }
         &-content{
-            text-align: center;
-            margin: 0 auto;
+            width: 320px;
+            @include responsive_480{
+                text-align: center;
+                margin: 0 auto;
+            }
+            .title-footer h2{
+                font-family: $font1;
+                font-weight: bold;
+                font-size: 20px;
+                color: $textWhite;
+                margin-top: 0;
+            }
+            .des-footer p{
+                font-family: $font1 ;
+                font-weight: bold;
+                color: $textWhite;
+                font-size: 10px;
+                margin-bottom: 0;
+            }
         }
-        &-menu{
-            text-align: center;
-            margin: 0 auto;
+        &-menu {
+            @include responsive_480{
+                text-align: center;
+                margin: 0 auto;
+            }
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: -5px;
+                @include responsive_480{
+                    padding-left: 0;
+                }
+                li{
+                    padding: 0  5px;
+                    a{
+                        color: $textWhite;
+                        font-size: 14px;
+                        font-family: $font1;
+                        font-weight: bold;
+                    }
+                }
+                span{
+                    color: $textWhite;
+                }
+            }
         }
-        &-menu ul{
-            padding-left: 0;
+        .des-menu-footer {
+            p{
+                text-align: right;
+                color: $textWhite;
+                font-size: 18px;
+                font-family: $font1;
+                font-weight: bold; 
+                @include responsive_480{
+                    text-align: center;
+                }
+            }
         }
-    }
-    .des-menu-footer p{
-        text-align: center;
     }
 }
